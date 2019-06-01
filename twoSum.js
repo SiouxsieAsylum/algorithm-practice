@@ -26,25 +26,25 @@ function twoSum(){
 const result = twoSum()
 console.log(result([4,2,5,7,8,1,9,12,3], 15))
 
-// Unwrapped Version
-let startingIndex = 0;
-function twoSum(numArr, target){
-    let startNum = numArr.shift();
-    let subtractedNum = target - startNum;
-    let found = numArr.findIndex(function (element){
-        return element === subtractedNum
-    })
+// // Unwrapped Version
+// let startingIndex = 0;
+// function twoSum(numArr, target){
+//     let startNum = numArr.shift();
+//     let subtractedNum = target - startNum;
+//     let found = numArr.findIndex(function (element){
+//         return element === subtractedNum
+//     })
 
-    if (found >= 0) {
-        //found is the index of the shortened array
-        //add for the initial shift
-        //add starting index, which doubles to track the amount of shifts thus far
-        let endingIndex = found + 1 + startingIndex
-        return [startingIndex, endingIndex];
-    } else {
-        startingIndex++;
-        return twoSum(numArr, target);
-    }
-}
+//     if (found >= 0) {
+//         //found is the index of the shortened array
+//         //add for the initial shift
+//         //add starting index, which doubles to track the amount of shifts thus far
+//         let endingIndex = found + 1 + startingIndex
+//         return [startingIndex, endingIndex];
+//     } else {
+//         startingIndex++;
+//         return twoSum(numArr, target);
+//     }
+// }
 
- console.log(twoSum([4,2,5,7,8,1,9,12,3], 15))
+//  console.log(twoSum([4,2,5,7,8,1,9,12,3], 15))
